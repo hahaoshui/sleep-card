@@ -1,17 +1,112 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>我的俄罗斯方块 App</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>入睡帮 — 睡前打卡与白噪音</title>
+<style>
+    :root{--bg:#0b1020;--card:#0f1724;--muted:#9aa4b2;--accent:#6ad3c9;--text:#e6eef6}
+    body{margin:0;font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial; background:linear-gradient(180deg,#071025 0%, #071422 100%); color:var(--text); -webkit-font-smoothing:antialiased}
+    .wrap{max-width:920px;margin:36px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,#245 0%, #58a 100%);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;color:white}
+    h1{margin:0;font-size:24px}
+    p.lead{color:var(--muted);margin-top:8px}
+
+    .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;margin-top:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h2{margin:0 0 12px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    ul{margin:0 0 0 18px;color:var(--muted)}
+    code{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:6px;color:var(--accent)}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#3ab9ff);color:#04282a;text-decoration:none;font-weight:600}
+    .muted{color:var(--muted)}
+    .section-title{display:flex;align-items:center;gap:10px}
+    .note{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;color:var(--muted);font-size:14px}
+</style>
 </head>
 <body>
-    <h1>俄罗斯方块 App</h1>
-    <p>欢迎下载我的游戏！</p>
-    
-    <h2>隐私政策</h2>
-    <p>本应用不会收集或存储任何用户的个人数据。</p>
-    
-    <h2>联系方式</h2>
-    <p>Email: yourname@example.com</p>
+<div class="wrap">
+    <header>
+        <div class="logo">睡</div>
+        <div>
+            <h1>入睡帮</h1>
+            <p class="lead">简单的睡前打卡与白噪音助眠工具 — 记录好习惯，轻松入睡。</p>
+        </div>
+    </header>
+
+    <div class="card">
+        <div class="section-title">
+            <h2>关于本应用</h2>
+        </div>
+        <p class="muted">入睡帮帮助你建立睡眠打卡习惯，记录每次入睡时间/时长，并提供白噪音选择来协助入睡。设计上以隐私优先为原则，默认将数据保存在本地设备，详见下方隐私政策。</p>
+
+        <div style="margin-top:12px" class="grid">
+            <div>
+                <h3>核心功能</h3>
+                <ul>
+                    <li>睡前打卡：一键记录“上床睡觉”时间</li>
+                    <li>打卡历史：查看按周/按月的打卡记录</li>
+                    <li>白噪音：内置多种白噪音（风声、雨声、海浪等）可选择并循环播放</li>
+                </ul>
+            </div>
+            <div>
+                <h3>设计原则</h3>
+                <ul>
+                    <li>隐私优先：不包含数据上传， 全部数据留存本地</li>
+                    <li>轻量易用：界面简洁，操作一目了然</li>
+                    <li>节电模式：白噪音播放支持定时关闭，减少耗电</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="privacy">
+        <div class="section-title">
+            <h2>隐私政策（Privacy Policy）</h2>
+        </div>
+
+        <p class="muted">生效日期：<strong>2025-09-02</strong></p>
+
+        <h3>数据存储与同步</h3>
+        <ul>
+            <li>所有打卡数据保存在你的设备本地，不会自动上传。</li>
+            <li>不包含数据上传</li>
+        </ul>
+
+    </div>
+
+    <div class="card" id="support">
+        <div class="section-title">
+            <h2>支持 & 联系方式</h2>
+        </div>
+
+        <p>如果你在使用中遇到问题、需反馈建议或要求删除数据，请通过以下方式联系我们：</p>
+        <ul>
+            <li><strong>电子邮件（推荐）：</strong> <code>your-email@example.com</code> <span class="muted">1654067927@qq.com</span></li>
+        </ul>
+
+        <h3>常见问题</h3>
+        <ul>
+            <li><strong>白噪音会一直循环播放吗？</strong>：支持定时关闭，请在播放页设置睡眠定时。</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="section-title">
+            <h2>免责声明</h2>
+        </div>
+        <p class="muted">入睡帮 提供的是行为习惯与白噪音辅助工具，不构成医学建议。如你有严重睡眠问题或疾病，请咨询专业医疗人员。</p>
+    </div>
+
+    <footer>
+    </footer>
+</div>
+
+<script>
+    // 显示当前年份
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
